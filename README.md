@@ -10,10 +10,10 @@ A comprehensive, two-phase machine learning pipeline governing the entire credit
 ---
 
 ## DATASET PREPROCESSING
-**Scaling Time & Amount:** The code immediately targets the unscaled Time and Amount columns and applies a StandardScaler to compress their mathematical variances without touching the existing PCA columns.
-**Deduplication** The script dynamically scans the entire dataframe and forcefully drops any exactly duplicated rows to prevent overlapping bias.
-**Random Under-Sampling** It creates a clean dataset by isolating the 492 fraud transactions, and then pulling an exactly identical random sample (492 rows) from the Legitimate transactions pool (stripping away hundreds of thousands of excess rows).
-**Final Export** It combines the two isolated frames, shuffles them evenly (frac=1), and saves the perfectly balanced 50/50 dataset directly to creditcard_balanced.csv.
+* **Scaling Time & Amount:** The code immediately targets the unscaled Time and Amount columns and applies a StandardScaler to compress their mathematical variances without touching the existing PCA columns.
+* **Deduplication** The script dynamically scans the entire dataframe and forcefully drops any exactly duplicated rows to prevent overlapping bias.
+* **Random Under-Sampling** It creates a clean dataset by isolating the 492 fraud transactions, and then pulling an exactly identical random sample (492 rows) from the Legitimate transactions pool (stripping away hundreds of thousands of excess rows).
+* **Final Export** It combines the two isolated frames, shuffles them evenly (frac=1), and saves the perfectly balanced 50/50 dataset directly to creditcard_balanced.csv.
 
 
 ## Phase 1: Visual Fraud Classification (Orange Data Mining)
